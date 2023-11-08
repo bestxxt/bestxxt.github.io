@@ -13,7 +13,7 @@
 title: Xintao Xie
 
 # Your name to show in the footer
-author: Some Person
+author: Xintao Xie
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -21,10 +21,8 @@ author: Some Person
 
 navbar-links:
   About Me: "index"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Blogs: 
+  About SCAU: "https://english.scau.edu.cn/"
+  About AIE lab: 
     - blog1: "2020-02-26-flake-it-till-you-make-it"
     - blog2: "2020-02-28-sample-markdown"
 
