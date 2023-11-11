@@ -23,6 +23,10 @@ navbar-links:
   About Me: "index"
   About SCAU: "https://english.scau.edu.cn/"
   About AIE lab: "https://mp.weixin.qq.com/s/-CLOkiklI8q9lvu9I86tZw"
+  EN/CN: 
+    - EN: "index"
+    - CN: "index_cn"
+  
 
 
 ################
