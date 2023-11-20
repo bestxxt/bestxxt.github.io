@@ -15,13 +15,15 @@ published: true
 ##### 远程微流控系统（毕业设计）
 <div class="container" style="width: 100%; padding-top: 10px">
     <div style="float: left; width:150px; padding-top: 15px" vertical-align='middle'>
-        <img src="img/图片1.gif"/>
+        <img src="img/微流控.png"/>
     </div>
     <div style="margin-left:170px">
-        <a href="https://www.ri.cmu.edu/wp-content/uploads/2020/03/rob.21931.pdf"><b>一种优雅的微小液滴控制技术</b></a><br>
-        Rogerio Bonatti, Wenshan Wang, <b>Cherie Ho</b>, Aayush Ahuja, Mirko Gschwindt, Efe Camci, Erdal Kayacan, Sanjiban Choudhury, Sebastian Scherer<br>  
-        Journal of Field Robotics, 2019<br>
-        <a href="https://www.ri.cmu.edu/wp-content/uploads/2020/03/rob.21931.pdf">[PDF]</a> <a href="https://youtu.be/ookhHnqmlaU">[Video]</a>
+        <a href="_posts/远程微流控系统.md"><b>一种优雅的微小液滴控制技术</b></a><br>
+        1.对数字液滴微流控技术及远程微流控系统在物联网中的应用进行了背景研究 <br>  
+        2.基于EWOD (electrowetting on dielectric)和Division & Fusion建立理论框架<br>
+        3.开发了基于ESP32 IoT芯片的远程微流控系统，实现了板载升压、USB供电、菜单接口、串口通信、联网等一系列功能<br> 
+        4.利用物联网的新特性，将上位机以HTML形式存储到ESP32芯片上，进一步降低了微流控系统的成本<br>
+        <a href="https://youtube.com/shorts/weA5z-Vz9aQ">[Video]</a>
     </div>
 </div>
 
