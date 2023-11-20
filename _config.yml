@@ -24,7 +24,7 @@ navbar-links:
   About SCAU: 
     - EN: "https://english.scau.edu.cn/"
     - CN: "https://scau.edu.cn/"
-  About AIE lab: ""
+  About AIE lab:
     - EN: "https://mp.weixin.qq.com/s/-CLOkiklI8q9lvu9I86tZw" #还没有添加英文说明
     - CN: "https://mp.weixin.qq.com/s/-CLOkiklI8q9lvu9I86tZw"
   EN/CN: 

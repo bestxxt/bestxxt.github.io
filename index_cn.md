@@ -13,6 +13,17 @@ published: true
 ### 项目经历
 
 ##### 远程微流控系统（毕业设计）
+<div class="container" style="width: 100%; padding-top: 10px">
+    <div style="float: left; width:150px; padding-top: 15px" vertical-align='middle'>
+        <img src="img/2019-12-filming-jfr.png"/>
+    </div>
+    <div style="margin-left:170px">
+        <a href="https://www.ri.cmu.edu/wp-content/uploads/2020/03/rob.21931.pdf"><b>Autonomous Aerial Cinematography Among Unstructured Environments With Online Artistic Decision-Making</b></a><br>
+        Rogerio Bonatti, Wenshan Wang, <b>Cherie Ho</b>, Aayush Ahuja, Mirko Gschwindt, Efe Camci, Erdal Kayacan, Sanjiban Choudhury, Sebastian Scherer<br>  
+        Journal of Field Robotics, 2019<br>
+        <a href="https://www.ri.cmu.edu/wp-content/uploads/2020/03/rob.21931.pdf">[PDF]</a> <a href="https://youtu.be/ookhHnqmlaU">[Video]</a>
+    </div>
+</div>
 
 ##### 2021年电子设计大赛G题-植保无人机
 
