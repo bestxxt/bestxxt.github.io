@@ -15,7 +15,7 @@ published: true
 #### 远程微流控系统（毕业设计）
 <div class="container" style="width: 100%; padding-top: 10px">
     <div style="float: left; width:150px; padding-top: 15px" vertical-align='middle'>
-        <img src="img/微流控.png"/>
+        <img src="/img/微流控.png"/>
     </div>
     <div style="margin-left:170px">
         <a href="Microfluidic_System.md"><b>一种优雅的微小液滴控制技术</b></a><br>
@@ -29,7 +29,7 @@ published: true
 #### 2021年电子设计大赛G题-植保无人机
 <div class="container" style="width: 100%; padding-top: 10px">
     <div style="float: left; width:150px; padding-top: 15px" vertical-align='middle'>
-        <img src="img/植保无人机.jpg"/>
+        <img src="/img/植保无人机.jpg"/>
     </div>
     <div style="margin-left:170px">
         <a href="https://bestxxt.github.io/Microfluidic_System.md"><b>一种优雅的微小液滴控制技术</b></a><br>
