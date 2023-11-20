@@ -14,8 +14,6 @@ published: true
 
 ##### 远程微流控系统（毕业设计）
 
-##### A 3D Hand Pose Estimation Architecture Based on Depth Camera 
-
 ##### 2021年电子设计大赛G题-植保无人机
 
 ##### 网箱对靶投饵系统
@@ -24,6 +22,11 @@ published: true
 
 ##### Small Desktop Display
 
+### 论文发表
+
+##### A 3D Hand Pose Estimation Architecture Based on Depth Camera 
+
+### 校园经历
 
 ### 荣誉 & 奖项
 
