@@ -102,7 +102,7 @@ In the laboratory, I actively participated in research projects related to the I
         <a href="index"><b>A sharing meeting to share my own competition experience</b></a><br>
         <li>To share their competition experience with the freshman class.</li>
         <li>Helping new students find the direction of learning about engineering</li>
-        <a href = "https://github.com/DumbZarro/BuddHand">[Detail]</a><br>
+        <a href = "https://mp.weixin.qq.com/s/oRzaCULBgyB7PYj5boasXQ">[Detail]</a><br>
     </div>
 </div><br>
 
