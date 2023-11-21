@@ -57,6 +57,7 @@ In the laboratory, I actively participated in research projects related to the I
         <li>Designed a control handle based on “ESP32+MPU6050” to control of the robot’s motion; “RGBD camera +Tensorflow algorithm” were used to collect hand joint data accurately to enhance the control experience.</li>
         <li>Built a video coding and streaming platform based on “Raspberry PI 4B+OBS”, received the control data from the server, completed the calculating and sent the results to chassis control system and PTZ control system through two serial ports; reduced the transmission delay of video streams to 0.6s.</li>
         <li>Set up MQTT data middleware based on “EMQX” to complete the data transfer of the cockpit and remote robot.</li>
+        <li>The Project was approved as a College Students’ Innovative Entrepreneurial Training Plan Program (National Level)</li><br>
         <a href="/certificates/结题证书.pdf">[Certificate of completion]</a>
     </div>
 </div><br>
