@@ -116,7 +116,3 @@ In the laboratory, I actively participated in research projects related to the I
 <li>Silver Prize, “Maker Cup” College Student Innovation and Entrepreneurship Competition (Project Leader, 2020)</li>
 <li>First Prize, “DING YING Cup” Invention and Innovation Competition (Team Member, 2020)</li>
 <li>First Prize, SCAU “Jike Challenge-Competition for Freshmen” (Project Leader, 2020)</li>
-
-<video width="640" height="360" controls>
-    <source src="/videos/1.mp4" type="video/mp4">
-</video>
