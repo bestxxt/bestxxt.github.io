@@ -35,7 +35,7 @@ In the laboratory, I actively participated in research projects related to the I
         <a href="index"><b>A GPS-free quadcopter indoor positioning competition</b></a><br>
         <li>Designed the flying control structure based on “STM32F4+STM32F1” master-slave microcontroller.</li>
         <li>Developed the flying control four-layer PCB, and sensors such as on-board integrated gyroscope and barometer.</li>
-        <li>Built the data communication framework of “distributed sensor and high-speed serial port” to add or delete external sensors.
+        <li>Built the data communication framework of “distributed sensor and high-speed serial port” to add or delete external sensors.</li>
         <li>Improved the stability of PID controller by optimizing the effect of camera feature recognition and edge detection. </li>
         <li>Optimized the operation algorithm to enable UAV to complete the operation path planning even when without GPS signal.</li>
         <a href="/certificates/电赛.pdf">[Honor certificates]</a>
