@@ -88,7 +88,7 @@ In the laboratory, I actively participated in research projects related to the I
         <a href="index"><b>A 3D Hand Pose Estimation Architecture Based on Depth Camera</b></a><br>
         Zhaolong Deng, Yanliang Qiu, <b>Xintao Xie</b>, Zuanhui Lin<br>
         The research architecture is open-sourced at <a href = "https://github.com/DumbZarro/BuddHand">link.</a><br>
-        <a herf= "/certificates/A 3D hand pose estimation.pdf" >[PDF]</a>
+        <a href= "/certificates/A 3D hand pose estimation.pdf" >[PDF]</a>
     </div>
 </div><br>
 
