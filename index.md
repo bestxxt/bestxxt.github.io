@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Xintao Xie
-subtitle: an undergraduate student from SCAU
+subtitle: An undergraduate student from SCAU
 published: true
 ---
 
