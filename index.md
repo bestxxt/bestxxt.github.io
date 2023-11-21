@@ -28,8 +28,8 @@ In the laboratory, I actively participated in research projects related to the I
 <div class="container" style="width: 100%">
     <div style="float: left; width:150px; padding-top: 15px" vertical-align='middle'>
         <img src="/img/植保无人机1.jpg"/>
-        <img src="/img/植保无人机.jpg"/>
-        <img src="/img/植保无人机.jpg"/>
+        <img src="/img/植保无人机2.png"/>
+        <img src="/img/植保无人机3.png"/>
     </div>
     <div style="margin-left:170px">
         <a href="index"><b>A GPS-free quadcopter indoor positioning competition</b></a><br>
@@ -46,8 +46,10 @@ In the laboratory, I actively participated in research projects related to the I
 
 <div class="container" style="width: 100%">
     <div style="float: left; width:150px; padding-top: 15px" vertical-align='middle'>
-        <img src="/img/5G车1.jpg"/>
+        <img src="/img/5G车4.png"/>
         <img src="/img/5G车2.png"/>
+        <img src="/img/5G车3.png"/>
+        <img src="/img/5G车1.jpg"/>
     </div>
     <div style="margin-left:170px">
         <a href="index"><b>A project combines 5G network and VR equipment</b></a><br>
@@ -75,7 +77,18 @@ In the laboratory, I actively participated in research projects related to the I
 
 ### Publications
 
-##### A 3D Hand Pose Estimation Architecture Based on Depth Camera 
+##### Journals 
+
+<div class="container" style="width: 100%">
+    <div style="float: left; width:150px; padding-top: 15px" vertical-align='middle'>
+        <img src="/img/论文.png"/>
+    </div>
+    <div style="margin-left:170px">
+        <a href="index"><b>A 3D Hand Pose Estimation Architecture Based on Depth Camera</b></a><br>
+        Zhaolong Deng, Yanliang Qiu, <b>Xintao Xie</b>, Zuanhui Lin<br>
+        The research architecture is open-sourced at <a href = "https://github.com/DumbZarro/BuddHand">link.</a>
+    </div>
+</div><br>
 
 ### Campus experiences
 
