@@ -87,14 +87,24 @@ In the laboratory, I actively participated in research projects related to the I
     <div style="margin-left:170px">
         <a href="index"><b>A 3D Hand Pose Estimation Architecture Based on Depth Camera</b></a><br>
         Zhaolong Deng, Yanliang Qiu, <b>Xintao Xie</b>, Zuanhui Lin<br>
-        The research architecture is open-sourced at <a href = "https://github.com/DumbZarro/BuddHand">link.</a>
+        The research architecture is open-sourced at <a href = "https://github.com/DumbZarro/BuddHand">link.</a><br>
         <a herf= "/certificates/A 3D hand pose estimation.pdf" >[PDF]</a>
     </div>
-    
-
 </div><br>
 
 ### Campus experiences
+
+<div class="container" style="width: 100%">
+    <div style="float: left; width:150px; padding-top: 15px" vertical-align='middle'>
+        <img src="/img/宣讲会.jpg"/>
+    </div>
+    <div style="margin-left:170px">
+        <a href="index"><b>A sharing meeting to share my own competition experience</b></a><br>
+        <li>To share their competition experience with the freshman class.</li>
+        <li>Helping new students find the direction of learning about engineering</li>
+        <a href = "https://github.com/DumbZarro/BuddHand">[Detail]</a><br>
+    </div>
+</div><br>
 
 ### Honors & Awards
 <li>First Prize, National Undergraduate Electronics Design Contest, National Level (Project Leader, 2021)</li>   
