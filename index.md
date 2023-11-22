@@ -72,7 +72,7 @@ In the laboratory, I actively participated in research projects related to the I
         <a href="index"><b>A small desktop monitor with main control chip ESP8266</b></a><br>
         <li>Set up functions such as web distribution network, setting, time calibration, and so on.</li>
         <li>Realized automatic crawling of weather, temperature and humidity information from <a href="http://www.weather.com.cn/">China Weather website</a>. </li>
-        <li>The project architecture is open-sourced at: <a href = "https://github.com/bestxxt/SmallDesktopDisplay">link</a> </li>
+        <li>The project architecture is open-sourced at: <a href = "https://github.com/bestxxt/SmallDesktopDisplay">Link</a> </li>
     </div>
 </div><br>
 
@@ -87,7 +87,7 @@ In the laboratory, I actively participated in research projects related to the I
     <div style="margin-left:170px">
         <a href="index"><b>A 3D Hand Pose Estimation Architecture Based on Depth Camera</b></a><br>
         Zhaolong Deng, Yanliang Qiu, <b>Xintao Xie</b>, Zuanhui Lin<br>
-        The research architecture is open-sourced at <a href = "https://github.com/DumbZarro/BuddHand">link.</a><br>
+        The research architecture is open-sourced at: <a href = "https://github.com/DumbZarro/BuddHand">Link</a><br>
         <a href= "/certificates/A 3D hand pose estimation.pdf" >[PDF]</a>
     </div>
 </div><br>
