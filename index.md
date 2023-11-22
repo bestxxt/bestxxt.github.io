@@ -76,6 +76,23 @@ In the laboratory, I actively participated in research projects related to the I
     </div>
 </div><br>
 
+##### Police Dog Intelligent   Equipment in Non-visual Combat
+
+<div class="container" style="width: 100%">
+    <div style="float: left; width:150px; padding-top: 15px" vertical-align='middle'>
+        <img src="/img/汪汪1.png"/>
+        <img src="/img/汪汪2.png"/>
+        <img src="/img/汪汪3.png"/>
+    </div>
+    <div style="margin-left:170px">
+        <a href="index"><b>An information remote combat system for police dogs</b></a><br>
+        <li>Aiming to solve the problems of unclear instructions, slow progress of search and rescue, and unsafety of policemen in complex situations such as anti-terrorism reconnaissance, rescue, and explosive search.</li>
+        <li>Combined laser point interaction scheme with bone conduction headset, which improved the accuracy of command.</li>
+        <li>Adopted OFDM image transmission technology to realize real-time non-line-of-sight (NLOS) operation and ensure the interaction delay to be less than 100 milliseconds. </li>
+        <li>Enabled the transmission distance to reach 1,200 meters, which realized real-time and stable long-distance cooperation between policemen and police dogs, and can be effectively applied in the field of police dog detection.</li>
+    </div>
+</div><br>
+
 ### Publications
 
 ##### Journals 
