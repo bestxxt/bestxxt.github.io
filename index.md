@@ -5,9 +5,11 @@ subtitle: An undergraduate student from SCAU
 published: true
 ---
 
-Hi, I'm Xintao Xie, an undergraduate student from South China Agricultural University majored in Electronic Information Science and Technology. During my time at SCAU, I became a member of the <a href="https://mp.weixin.qq.com/s/-CLOkiklI8q9lvu9I86tZw">AIE Lab</a>, a research laboratory under the Technology Department of the SCAU Science and Technology Innovation and Entrepreneurship Federation.
+Hi, I am **Xintao Xie**, currently pursuing a *Master of Engineering* at the **University of Toronto**. I completed my undergraduate studies at **South China Agricultural University**, majoring in *Electronic Information Science and Technology*. During my time at SCAU, I was an active member of the <a href="https://mp.weixin.qq.com/s/-CLOkiklI8q9lvu9I86tZw">AIE Lab</a>, a research laboratory under the Technology Department of the SCAU Science and Technology Innovation and Entrepreneurship Federation.
 
-In the laboratory, I actively participated in research projects related to the Internet and embedded systems. My interests lie deeply in industrial robotics, electronic control, algorithms, and autonomous navigation. I am enthusiastic about exploring and contributing to advancements in these fields.
+In the AIE Lab, I engaged in research projects focused on the Internet and embedded systems, nurturing a deep interest in industrial robotics, electronic control, algorithms, and autonomous navigation. I am passionate about advancing these fields through innovative research and practical applications.
+
+
 
 ### Project experiences
 
