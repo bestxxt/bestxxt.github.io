@@ -6,9 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          node-version: '20'
       - name: Build the site in the jekyll/builder container
         run: |
-          using: 'node20'
           export JEKYLL_VERSION=3.8
           docker run \
           -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
