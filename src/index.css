@@ -1,0 +1,133 @@
+/* src/index.css */
+:root {
+  /* Typography */
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* --- Color Utilities (B&W Minimalist) --- */
+.bg-black {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.bg-white {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.bg-light-gray {
+  background-color: #f4f5fb;
+  color: #000000;
+}
+
+.bg-footer {
+  background-color: #f8f9fa;
+  color: #000000;
+}
+
+/* --- Layout Utilities --- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background: #ffffff;
+  color: #000000;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+.btn-primary.inverse {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+.btn-primary:hover, .btn-primary.inverse:hover {
+  opacity: 0.8;
+}
+
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  border: 1px solid currentColor;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: currentColor;
+  color: #ffffff; /* This works nicely when hovering a black outline on white bg */
+}
+.bg-black .btn-outline:hover {
+  color: #000000; /* When on black bg, hover text becomes black */
+}

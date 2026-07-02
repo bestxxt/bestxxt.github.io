@@ -1,0 +1,94 @@
+@keyframes techBgFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.tech-background-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  /* Let clicks pass through to buttons underneath */
+  z-index: 0;
+  /* Keep it behind the hero content */
+  animation: techBgFadeIn 2s ease-out both;
+  /* Fade in alongside text */
+}
+
+.tech-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Float Animations for that "living system" vibe */
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-15px) rotate(0.5deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes floatMedium {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(-0.5deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes floatFast {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-slow {
+  animation: floatSlow 12s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.float-medium {
+  animation: floatMedium 8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.float-fast {
+  animation: floatFast 5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* The hero content must have a higher z-index to stay above the background */
+.hero-container {
+  position: relative;
+  z-index: 10;
+}
