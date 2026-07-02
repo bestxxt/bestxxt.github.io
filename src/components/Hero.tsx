@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Hero.css';
 import TechBackground from './TechBackground';
 
@@ -18,7 +19,7 @@ const Hero = () => {
           </p>
           <div className="hero-cta stagger-3">
             <a href="#projects" className="btn-primary" style={{ marginRight: '1rem' }}>See My Work</a>
-            <a href="/photos" className="btn-outline">My Photo Wall</a>
+            <Link to="/photos" className="btn-outline">My Photo Wall</Link>
           </div>
         </div>
       </div>
