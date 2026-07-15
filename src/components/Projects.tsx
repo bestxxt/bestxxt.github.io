@@ -28,17 +28,52 @@ const uoftProjects: Project[] = [
     objectFit: "contain"
   },
   {
-    title: "Robot State Estimation (AER1513)",
-    description: "Implemented an Extended Kalman Filter (EKF) to continuously estimate and predict the dynamic position of a robot relying on landmark observation data in a simulated environment.",
-    tags: ["Kalman Filter", "Python", "Robotics"],
-    videos: ["/img/projects/aer1513/aer1513_kalman_filter_synced_cropped.mp4", "/img/projects/aer1513/dataset2_4x.mp4"],
-    objectFit: "contain"
-  },
-  {
     title: "Web3 Pet Adoption DApp (APS1050)",
     description: "A decentralized application built on blockchain technology facilitating transparent and secure online pet adoption processes. Implemented smart contracts and an intuitive frontend.",
     tags: ["Web3", "Blockchain", "DApp"],
     images: ["/img/projects/aps1050_pet_adoption/pet_adoption_ui.png", "/img/projects/aps1050_pet_adoption/pet_adoption_ui_2.png"],
+    objectFit: "contain"
+  },
+  {
+    title: "Purchasing Intent Predictor (MIE1628)",
+    description: "Built an e-commerce purchasing intent classifier using XGBoost and SVM. Addressed severe class imbalance with SMOTE and applied PCA for robust feature selection on session data.",
+    tags: ["XGBoost", "SVM", "E-Commerce"],
+    images: ["/img/projects/mie1628/mie1628_3.png", "/img/projects/mie1628/mie1628_4.png"],
+    objectFit: "cover"
+  },
+  {
+    title: "Smart Grid Stability (APS1070)",
+    description: "Designed a mathematical regression model to predict decentralized power grid stability based on 10,000 simulated instances with 12 node features.",
+    tags: ["Linear Regression", "Smart Grid", "Predictive Modeling"],
+    images: ["/img/projects/aps1070/aps1070_3.png"],
+    objectFit: "cover"
+  },
+  {
+    title: "Algorithmic Trading ML Pipeline (APS1052)",
+    description: "Built an automated ML pipeline predicting cryptocurrency (BTCUSDT) price movements. Applied rigorous financial testing including White's Reality Check, Monte Carlo simulations, and Alpha-Lens evaluation to prevent data snooping.",
+    tags: ["Algorithmic Trading", "Deep Learning", "Pipeline"],
+    images: ["/img/projects/aps1052/aps1052_200.png", "/img/projects/aps1052/aps1052_1.png"],
+    objectFit: "cover"
+  },
+  {
+    title: "Reinforcement Learning Control (APS1080)",
+    description: "Designed and implemented fundamental Reinforcement Learning algorithms (SARSA, Expected SARSA, Q-Learning) from scratch to solve the CartPole balancing problem and gridworld mazes in OpenAI Gym.",
+    tags: ["Reinforcement Learning", "Q-Learning", "OpenAI Gym"],
+    images: ["/img/projects/aps1080/cart_pole.gif", "/img/projects/aps1080/lunar_lander.gif"],
+    objectFit: "cover"
+  },
+  {
+    title: "Large-Scale Data Mining (MIE524)",
+    description: "Processed massive datasets using Apache Spark and MapReduce. Implemented Locality Sensitive Hashing (LSH) and Vector Databases for approximate nearest neighbor search in high-dimensional spaces.",
+    tags: ["Apache Spark", "Vector DB", "LSH"],
+    images: ["/img/projects/mie524/mie524_2.png", "/img/projects/mie524/mie524_10.png"],
+    objectFit: "cover"
+  },
+  {
+    title: "Robot State Estimation (AER1513)",
+    description: "Implemented an Extended Kalman Filter (EKF) to continuously estimate and predict the dynamic position of a robot relying on landmark observation data in a simulated environment.",
+    tags: ["Kalman Filter", "Python", "Robotics"],
+    videos: ["/img/projects/aer1513/aer1513_kalman_filter_synced_cropped.mp4", "/img/projects/aer1513/dataset2_4x.mp4"],
     objectFit: "contain"
   }
 ];
@@ -61,6 +96,13 @@ const scauProjects: Project[] = [
     description: "Built a GPS-free quadcopter from scratch during an intensive 4-day, 3-night hackathon. Designed the flight control architecture and data communication framework using STM32, achieving stable indoor flight via custom PID optimization.",
     tags: ["STM32", "RTOS", "OpenCV", "Hackathon"],
     images: ["/img/projects/drone/植保无人机1.jpg", "/img/projects/drone/hackathon_award.jpg"]
+  },
+  {
+    title: "3D Hand Pose Estimation (SPIE Paper)",
+    description: "Co-authored an academic paper published in SPIE (AIBDF 2022). Proposed a 3D hand pose estimation architecture leveraging depth cameras. Designed a novel standardizer that optimized detection efficiency and reduced inference time by 35%.",
+    tags: ["Computer Vision", "SPIE Paper", "Depth Camera"],
+    images: ["/img/projects/scau_paper/paper_cover.png", "/img/projects/scau_paper/paper_diagram.png"],
+    objectFit: "contain"
   }
 ];
 
@@ -70,11 +112,11 @@ const ProjectCard = ({ project, index }: { project: Project, index: number }) =>
       {project.videos ? (
         <div className="multi-image-container">
           {project.videos.map((vid, i) => (
-            <video key={i} src={vid} loop muted playsInline className="project-image split-image" style={{ objectFit: project.objectFit || 'cover' }} onMouseEnter={(e) => e.currentTarget.play()} onMouseLeave={(e) => e.currentTarget.pause()} />
+            <video key={i} src={vid} autoPlay loop muted playsInline className="project-image split-image" style={{ objectFit: project.objectFit || 'cover' }} />
           ))}
         </div>
       ) : project.video ? (
-        <video src={project.video} loop muted playsInline className="project-image" style={{ objectFit: project.objectFit || 'cover' }} onMouseEnter={(e) => e.currentTarget.play()} onMouseLeave={(e) => e.currentTarget.pause()} />
+        <video src={project.video} autoPlay loop muted playsInline className="project-image" style={{ objectFit: project.objectFit || 'cover' }} />
       ) : project.images ? (
         <div className="multi-image-container">
           {project.images.map((img, i) => (

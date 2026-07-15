@@ -29,3 +29,6 @@ dist-ssr
 .trash
 scripts/venv/
 .agents
+courseworks/
+unused_course_charts/
+Essay/
