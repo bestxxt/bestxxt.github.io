@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import './Projects.css';
 
 type Project = {
@@ -69,11 +70,11 @@ const ProjectCard = ({ project, index }: { project: Project, index: number }) =>
       {project.videos ? (
         <div className="multi-image-container">
           {project.videos.map((vid, i) => (
-            <video key={i} src={vid} autoPlay loop muted playsInline className="project-image split-image" style={{ objectFit: project.objectFit || 'cover' }} />
+            <video key={i} src={vid} loop muted playsInline className="project-image split-image" style={{ objectFit: project.objectFit || 'cover' }} onMouseEnter={(e) => e.currentTarget.play()} onMouseLeave={(e) => e.currentTarget.pause()} />
           ))}
         </div>
       ) : project.video ? (
-        <video src={project.video} autoPlay loop muted playsInline className="project-image" style={{ objectFit: project.objectFit || 'cover' }} />
+        <video src={project.video} loop muted playsInline className="project-image" style={{ objectFit: project.objectFit || 'cover' }} onMouseEnter={(e) => e.currentTarget.play()} onMouseLeave={(e) => e.currentTarget.pause()} />
       ) : project.images ? (
         <div className="multi-image-container">
           {project.images.map((img, i) => (
@@ -101,6 +102,37 @@ const ProjectCard = ({ project, index }: { project: Project, index: number }) =>
   </div>
 );
 
+const ScrollableGrid = ({ projects }: { projects: Project[] }) => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 432; // 400px card + 32px gap
+      scrollRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <div className="projects-grid-wrapper">
+      <button className="scroll-btn scroll-btn-left" onClick={() => scroll('left')} aria-label="Scroll left">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+      <div className="projects-grid" ref={scrollRef}>
+        {projects.map((project, index) => (
+          <ProjectCard key={project.title} project={project} index={index} />
+        ))}
+      </div>
+      <button className="scroll-btn scroll-btn-right" onClick={() => scroll('right')} aria-label="Scroll right">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+  );
+};
+
 const Projects = () => {
   return (
     <section id="projects" className="section projects-section bg-light-gray">
@@ -114,11 +146,7 @@ const Projects = () => {
               Here, I deeply pursue the frontiers of <strong>Data Science & Artificial Intelligence</strong>. Translating algorithms into intelligent, real-world systems.
             </p>
           </div>
-          <div className="projects-grid">
-            {uoftProjects.map((project, index) => (
-              <ProjectCard key={project.title} project={project} index={index} />
-            ))}
-          </div>
+          <ScrollableGrid projects={uoftProjects} />
         </div>
 
         {/* Category 2: SCAU */}
@@ -129,11 +157,7 @@ const Projects = () => {
               Where I built my passion for <strong>Hardware & Robotics</strong>. Designing physical systems from the ground up to solve mechanical challenges.
             </p>
           </div>
-          <div className="projects-grid">
-            {scauProjects.map((project, index) => (
-              <ProjectCard key={project.title} project={project} index={index} />
-            ))}
-          </div>
+          <ScrollableGrid projects={scauProjects} />
         </div>
 
       </div>

@@ -1,8 +1,16 @@
 /* src/index.css */
 :root {
   /* Typography */
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Retro Print Media Color Palette */
+  --paper: #F4F1EA;
+  --ink: #1A1A1A;
+  --accent-red: #8B3A3A;
+  --accent-green: #4A5D23;
+  --accent-blue: #2B4B77;
 }
 
 * {
@@ -16,14 +24,17 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: var(--font-sans);
+  background-color: var(--paper);
+  color: var(--ink);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+  font-family: var(--font-serif);
+  color: var(--ink);
   line-height: 1.2;
 }
 
@@ -36,25 +47,33 @@ ul {
   list-style: none;
 }
 
-/* --- Color Utilities (B&W Minimalist) --- */
-.bg-black {
-  background-color: #000000;
-  color: #ffffff;
+/* --- Brutalist Utility Classes --- */
+.brutal-border {
+  border: 3px solid var(--ink);
+  border-radius: 0;
 }
 
-.bg-white {
-  background-color: #ffffff;
-  color: #000000;
+.brutal-shadow {
+  box-shadow: 8px 8px 0px 0px var(--ink);
 }
 
-.bg-light-gray {
-  background-color: #f4f5fb;
-  color: #000000;
+.brutal-shadow:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 6px 6px 0px 0px var(--ink);
 }
 
+.mono-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.bg-paper { background-color: var(--paper); color: var(--ink); }
+.bg-ink { background-color: var(--ink); color: var(--paper); }
 .bg-footer {
-  background-color: #f8f9fa;
-  color: #000000;
+  background-color: var(--paper);
+  border-top: 4px solid var(--ink);
 }
 
 /* --- Layout Utilities --- */
@@ -89,45 +108,49 @@ ul {
 .stagger-3 { animation-delay: 0.3s; }
 .stagger-4 { animation-delay: 0.4s; }
 
-/* Buttons */
+/* Buttons - Neo Brutalism */
 .btn-primary {
   display: inline-block;
-  background: #ffffff;
-  color: #000000;
+  background: var(--ink);
+  color: var(--paper);
   padding: 0.75rem 1.5rem;
-  font-family: var(--font-heading);
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: 1px solid #ffffff;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  box-shadow: 6px 6px 0px 0px var(--ink);
+  transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
 
-.btn-primary.inverse {
-  background: #000000;
-  color: #ffffff;
-  border-color: #000000;
-}
-
-.btn-primary:hover, .btn-primary.inverse:hover {
-  opacity: 0.8;
+.btn-primary:hover {
+  background: var(--paper);
+  color: var(--ink);
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0px 0px var(--ink);
 }
 
 .btn-outline {
   display: inline-block;
-  background: transparent;
-  color: inherit;
+  background: var(--paper);
+  color: var(--ink);
   padding: 0.75rem 1.5rem;
-  font-family: var(--font-heading);
-  font-weight: 600;
-  border: 1px solid currentColor;
-  transition: all 0.3s ease;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  box-shadow: 6px 6px 0px 0px var(--ink);
+  transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
 
 .btn-outline:hover {
-  background: currentColor;
-  color: #ffffff; /* This works nicely when hovering a black outline on white bg */
-}
-.bg-black .btn-outline:hover {
-  color: #000000; /* When on black bg, hover text becomes black */
+  background: var(--ink);
+  color: var(--paper);
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0px 0px var(--ink);
 }

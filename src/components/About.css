@@ -17,7 +17,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #111827; /* dark mode for details */
+  background-color: var(--ink); /* Brutalist expansion */
   /* clip-path and transition are injected via inline style */
   z-index: 1;
   pointer-events: none;
@@ -131,8 +131,8 @@
   left: 50%;
   top: 0;
   bottom: 0;
-  width: 2px;
-  background: #e5e7eb;
+  width: 4px;
+  background: var(--ink);
   transform: translateX(-50%);
 }
 
@@ -164,39 +164,41 @@
 .timeline-dot {
   position: absolute;
   top: 0;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: #000000;
-  border: 4px solid #ffffff;
-  box-shadow: 0 0 0 4px #f3f4f6;
-  transition: background 0.3s;
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  background: var(--ink);
+  border: 2px solid var(--ink);
+  box-shadow: 4px 4px 0px 0px var(--ink);
+  transition: all 0.1s;
 }
 
 .timeline-calendar-event:hover ~ .timeline-dot-sticky .timeline-dot,
 .timeline-item:hover .timeline-dot {
-  filter: brightness(1.3);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4);
+  background: var(--paper);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px var(--ink);
 }
 
 .timeline-item.left .timeline-dot {
-  right: -8px;
+  right: -10px;
 }
 
 .timeline-item.right .timeline-dot {
-  left: -8px;
+  left: -10px;
 }
 
 .timeline-calendar-event {
   flex: 1;
-  background: #ffffff;
+  background: var(--paper);
   border-radius: 0;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-  transition: all 0.3s ease;
+  border: 3px solid var(--ink);
+  box-shadow: 8px 8px 0px 0px var(--ink);
+  transition: all 0.1s ease;
   position: relative;
   cursor: pointer;
   margin: 0 2rem;
+  color: var(--ink);
 }
 
 .timeline-item.left .timeline-calendar-event {
@@ -210,8 +212,23 @@
 }
 
 .timeline-calendar-event:hover {
-  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-  border-color: #d1d5db;
+  background: var(--ink);
+  color: var(--paper);
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0px 0px var(--ink);
+}
+
+.timeline-calendar-event:hover .timeline-year {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.timeline-calendar-event:hover h3 {
+  color: var(--paper);
+}
+
+.timeline-calendar-event:hover p {
+  color: var(--paper);
 }
 
 .timeline-text-sticky {
@@ -224,33 +241,40 @@
   display: inline-block;
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  color: #6b7280;
+  font-weight: 700;
   margin-bottom: 0.5rem;
-  background: #f3f4f6;
   padding: 0.2rem 0.6rem;
   border-radius: 0;
+  border: 2px solid var(--ink);
 }
 
 .timeline-text-sticky h3 {
-  font-size: 1.25rem;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #111827;
+  color: var(--ink);
+  font-weight: 800;
 }
 
 .timeline-text-sticky p {
-  color: #4b5563;
+  color: var(--ink);
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 1rem;
 }
 
 .click-hint {
+  font-family: var(--font-mono);
   font-size: 0.85rem;
-  font-weight: 600;
-  color: #3b82f6;
+  font-weight: 700;
+  color: var(--ink);
   opacity: 0;
   transform: translateX(-10px);
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
+}
+
+.timeline-calendar-event:hover .click-hint {
+  color: var(--paper);
 }
 
 .timeline-item.left .click-hint {
@@ -287,64 +311,71 @@
 
 .detail-content {
   background: transparent;
-  color: #ffffff;
+  color: var(--paper);
   text-align: center;
 }
 
 .detail-type {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--paper);
+  color: var(--ink);
   padding: 0.4rem 1rem;
   border-radius: 0;
   font-size: 0.85rem;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
+  margin-right: 1rem;
 }
 
 .detail-year {
-  display: block;
+  display: inline-block;
   font-family: var(--font-mono);
-  color: #9ca3af;
+  font-weight: 700;
+  color: var(--paper);
+  border: 2px solid var(--paper);
+  padding: 0.3rem 0.8rem;
   margin-bottom: 1rem;
 }
 
 .detail-title {
+  font-family: var(--font-serif);
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 900;
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
 
 .detail-subtitle {
   font-size: 1.25rem;
-  color: #d1d5db;
+  color: var(--paper);
   font-weight: 400;
   margin-bottom: 2.5rem;
 }
 
 .detail-divider {
-  width: 60px;
+  width: 100px;
   height: 4px;
-  background: #3b82f6;
+  background: var(--paper);
   margin: 0 auto 2.5rem auto;
-  border-radius: 2px;
+  border-radius: 0;
 }
 
 .detail-body {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #9ca3af;
+  color: var(--paper);
   text-align: left;
 }
 
 .detail-bullets {
   text-align: left;
-  color: #9ca3af;
+  color: var(--paper);
   font-size: 1.1rem;
   line-height: 1.8;
   padding-left: 1.5rem;
-  list-style-type: disc;
+  list-style-type: square;
 }
 
 .detail-bullets li {

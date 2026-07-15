@@ -11,8 +11,6 @@ type TimelineEvent = {
   details: string[];
   topOffsetMonths: number;
   durationMonths: number;
-  themeColor: string;
-  textColor: string;
 };
 
 // Base date: Apr 2026 = 0 (Top)
@@ -31,8 +29,6 @@ const events: TimelineEvent[] = [
     ],
     topOffsetMonths: 0,
     durationMonths: 15,
-    themeColor: '#1e3765',
-    textColor: '#ffffff',
   },
   {
     id: 'uoft',
@@ -44,8 +40,6 @@ const events: TimelineEvent[] = [
     details: [],
     topOffsetMonths: 0,
     durationMonths: 19,
-    themeColor: '#1e3765',
-    textColor: '#ffffff',
   },
   {
     id: 'swe_huitong',
@@ -62,8 +56,6 @@ const events: TimelineEvent[] = [
     ],
     topOffsetMonths: 23,
     durationMonths: 9,
-    themeColor: '#4b5563', // Grey
-    textColor: '#ffffff',
   },
   {
     id: 'scau',
@@ -75,8 +67,6 @@ const events: TimelineEvent[] = [
     details: [],
     topOffsetMonths: 34,
     durationMonths: 45,
-    themeColor: '#007a48',
-    textColor: '#ffffff',
   },
   {
     id: 'intern_powergrid',
@@ -92,8 +82,6 @@ const events: TimelineEvent[] = [
     ],
     topOffsetMonths: 41,
     durationMonths: 5,
-    themeColor: '#01337a',
-    textColor: '#ffffff',
   },
   {
     id: 'ra_gdas',
@@ -109,8 +97,6 @@ const events: TimelineEvent[] = [
     ],
     topOffsetMonths: 57,
     durationMonths: 5,
-    themeColor: '#467936',
-    textColor: '#ffffff',
   }
 ];
 
@@ -122,7 +108,6 @@ const About = () => {
   const [clickCoords, setClickCoords] = useState<{ x: number; y: number } | null>(null);
   const [savedScrollY, setSavedScrollY] = useState<number | null>(null);
   const [transitionStyle, setTransitionStyle] = useState('none');
-  const [activeColor, setActiveColor] = useState('#111827');
 
   const handleEventClick = (event: TimelineEvent, e: React.MouseEvent) => {
     // Only capture click if we aren't already viewing details
@@ -130,7 +115,6 @@ const About = () => {
 
     // Save current scroll position
     setSavedScrollY(window.scrollY);
-    setActiveColor(event.themeColor);
 
     const section = document.getElementById('about');
     if (section) {
@@ -172,7 +156,7 @@ const About = () => {
         className="bg-expansion-layer"
         style={{
           transition: transitionStyle,
-          backgroundColor: activeColor,
+          backgroundColor: 'var(--ink)',
           clipPath: selectedEvent && clickCoords 
             ? `circle(300% at ${clickCoords.x}px ${clickCoords.y}px)` 
             : clickCoords 
@@ -222,27 +206,20 @@ const About = () => {
                 }}
               >
                 <div className="timeline-dot-sticky">
-                  <div className="timeline-dot" style={{ background: event.themeColor }}></div>
+                  <div className="timeline-dot brutal-border bg-ink"></div>
                 </div>
                 
                 <div 
-                  className="timeline-calendar-event" 
-                  style={{ backgroundColor: event.themeColor, color: event.textColor, borderColor: event.themeColor }}
+                  className="timeline-calendar-event brutal-border brutal-shadow" 
                   onClick={(e) => handleEventClick(event, e)}
                 >
                   <div className="timeline-text-sticky">
-                    <span 
-                      className="timeline-year" 
-                      style={{ 
-                        color: event.textColor, 
-                        backgroundColor: event.textColor === '#ffffff' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.1)' 
-                      }}
-                    >
+                    <span className="timeline-year mono-tag bg-ink text-paper">
                       {event.year}
                     </span>
-                    <h3 style={{ color: event.textColor }}>{event.title}</h3>
-                    <p style={{ color: event.textColor === '#ffffff' ? 'rgba(255,255,255,0.9)' : 'rgba(0,0,0,0.7)' }}>{event.subtitle}</p>
-                    <div className="click-hint" style={{ color: event.textColor }}>Click to view details &rarr;</div>
+                    <h3>{event.title}</h3>
+                    <p>{event.subtitle}</p>
+                    <div className="click-hint mono-tag">Click to view details &rarr;</div>
                   </div>
                 </div>
               </div>
@@ -251,34 +228,25 @@ const About = () => {
 
           <div className={`detail-container ${selectedEvent ? 'visible' : ''}`}>
             {selectedEvent && (
-              <div className="detail-content fade-in-up" style={{ color: selectedEvent.textColor }}>
-                <span 
-                  className="detail-type" 
-                  style={{ backgroundColor: selectedEvent.textColor === '#ffffff' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)' }}
-                >
-                  {selectedEvent.type === 'education' ? '🎓 Education' : '💼 Work Experience'}
+              <div className="detail-content fade-in-up">
+                <span className="detail-type mono-tag">
+                  {selectedEvent.type === 'education' ? 'EDUCATION' : 'WORK EXPERIENCE'}
                 </span>
-                <span 
-                  className="detail-year"
-                  style={{ color: selectedEvent.textColor === '#ffffff' ? '#9ca3af' : 'rgba(0,0,0,0.6)' }}
-                >
+                <span className="detail-year mono-tag">
                   {selectedEvent.year}
                 </span>
-                <h4 className="detail-subtitle" style={{ fontSize: '1.5rem', color: selectedEvent.textColor, marginBottom: '2rem' }}>
+                <h4 className="detail-subtitle">
                   {selectedEvent.subtitle}
                 </h4>
-                <div className="detail-divider" style={{ backgroundColor: selectedEvent.textColor }}></div>
+                <div className="detail-divider"></div>
                 {selectedEvent.details.length > 0 ? (
-                  <ul 
-                    className="detail-bullets"
-                    style={{ color: selectedEvent.textColor === '#ffffff' ? '#d1d5db' : 'rgba(0,0,0,0.8)' }}
-                  >
+                  <ul className="detail-bullets">
                     {selectedEvent.details.map((bullet, i) => (
                       <li key={i}>{bullet}</li>
                     ))}
                   </ul>
                 ) : (
-                  <p className="detail-body" style={{ color: selectedEvent.textColor === '#ffffff' ? '#9ca3af' : 'rgba(0,0,0,0.6)' }}>
+                  <p className="detail-body">
                     No additional details provided.
                   </p>
                 )}

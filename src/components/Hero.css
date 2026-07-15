@@ -5,6 +5,8 @@
   position: relative;
   overflow: hidden;
   padding-top: 70px;
+  background-color: var(--paper);
+  border-bottom: 4px solid var(--ink);
 }
 
 .hero-container {
@@ -12,35 +14,45 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  width: 100%;
   max-width: 900px;
+  margin: 0 auto;
+  z-index: 10;
+  position: relative;
 }
 
 .hero-title {
   font-size: 5rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  color: var(--ink);
   letter-spacing: -2px;
 }
 
 .hero-tags {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-.separator {
-  color: #666666;
-  font-weight: 300;
-  margin: 0 0.5rem;
+.tag-box {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--ink);
+  box-shadow: 4px 4px 0px 0px var(--ink);
 }
 
 .hero-vibe {
   font-size: 1.25rem;
-  color: #a1a1aa;
+  color: var(--ink);
   max-width: 600px;
   margin-bottom: 3rem;
   line-height: 1.8;
+  font-weight: 500;
 }
 
 .hero-cta {
@@ -48,14 +60,82 @@
   gap: 1.5rem;
 }
 
+/* --- Scattered Background Icons --- */
+.hero-background-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-icon-wrapper {
+  position: absolute;
+  opacity: 0;
+  animation: flyIn 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes flyIn {
+  0% {
+    transform: translate(var(--start-x), var(--start-y)) rotate(var(--start-rot)) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.hero-floating-icon {
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  transition: opacity 0.3s ease;
+  animation: floatIcon 15s ease-in-out infinite;
+}
+
+.hero-icon-wrapper:nth-child(even) .hero-floating-icon {
+  animation-duration: 20s;
+  animation-delay: -5s;
+}
+
+.hero-icon-wrapper:nth-child(3n) .hero-floating-icon {
+  animation-duration: 25s;
+  animation-delay: -10s;
+}
+
+.hero-icon-wrapper:nth-child(4n) .hero-floating-icon {
+  animation-duration: 18s;
+  animation-delay: -7s;
+}
+
+.hero-icon-wrapper:nth-child(5n) .hero-floating-icon {
+  animation-duration: 22s;
+  animation-delay: -12s;
+}
+
+.hero-floating-icon:hover {
+  opacity: 0.8;
+}
+
+@keyframes floatIcon {
+  0% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-15px) rotate(5deg); }
+  66% { transform: translateY(10px) rotate(-5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-title {
     font-size: 3.5rem;
-  }
-  .hero-tags {
-    font-size: 1.2rem;
-  }
-  .hero-vibe {
-    font-size: 1.1rem;
   }
 }
